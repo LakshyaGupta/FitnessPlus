@@ -114,7 +114,7 @@ public class DashboardTab {
         retrieveData();
 
         Group group = new Group();
-        group.getChildren().addAll(txt_diff_exercise,lbl_diff_exercise,lbl_diff_food,txt_diff_food,lbl_diff_sleep,txt_diff_sleep,txt_exercise,lbl_exercise,lbl_sleep,lbl_food,txt_food,txt_id,lbl_id,listView);
+        group.getChildren().addAll(txt_sleep,txt_diff_exercise,lbl_diff_exercise,lbl_diff_food,txt_diff_food,lbl_diff_sleep,txt_diff_sleep,txt_exercise,lbl_exercise,lbl_sleep,lbl_food,txt_food,txt_id,lbl_id,listView);
         tab.setContent(group);
     }
 
