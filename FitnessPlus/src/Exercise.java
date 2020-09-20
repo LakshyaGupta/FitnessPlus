@@ -1,51 +1,27 @@
-import javafx.scene.Group;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TextField;
-
 public class Exercise {
-    private Tab tab;
 
-    public Exercise(Tab tab) {
-        this.tab = tab;
+    private int id;
+    private String name;
+    private double hours;
+
+    public Exercise(int id, String name, double hours) {
+        this.id = id;
+        this.name = name;
+        this.hours = hours;
     }
 
-    public void open() throws Exception {
-        ListView listView = new ListView();
-        listView.setLayoutX(0);
-        listView.setLayoutY(0);
-        listView.setPrefSize(350,650);
+    public int getId() { return id; }
 
-        TextField txt_id = new TextField();
-        Label lbl_id = new Label("ID: ");
-        txt_id.setLayoutX(875);
-        txt_id.setLayoutY(120);
-        txt_id.setPrefSize(350,45);
-        lbl_id.setLayoutX(750);
-        lbl_id.setLayoutY(120);
-        txt_id.setEditable(false);
+    public void setId(int id) { this.id = id; }
 
-        TextField txt_firstName = new TextField();
-        Label lbl_firstName = new Label("First Name: ");
-        txt_firstName.setLayoutX(875);
-        txt_firstName.setLayoutY(180);
-        txt_firstName.setPrefSize(350,45);
-        lbl_firstName.setLayoutX(750);
-        lbl_firstName.setLayoutY(180);
-        txt_firstName.setEditable(false);
+    public String getName() { return name; }
 
-        TextField txt_lastName = new TextField();
-        Label lbl_lastName = new Label("Last Name: ");
-        txt_lastName.setLayoutX(875);
-        txt_lastName.setLayoutY(240);
-        txt_lastName.setPrefSize(350,45);
-        lbl_lastName.setLayoutX(750);
-        lbl_lastName.setLayoutY(240);
-        txt_lastName.setEditable(false);
+    public void setName(String name) { this.name = name; }
 
-        Group group = new Group();
-        group.getChildren().addAll(txt_firstName,lbl_firstName,txt_lastName,lbl_lastName,txt_id,lbl_id,listView);
-        tab.setContent(group);
-    }
+    public double getHours() { return hours; }
+
+    public void setHours(double hours) { this.hours = hours; }
+
+    public String toString() { return id + " - " + hours; }
 }
+
