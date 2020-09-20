@@ -1,51 +1,73 @@
-import javafx.scene.Group;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TextField;
-
 public class Dashboard {
-    private Tab tab;
 
-    public Dashboard(Tab tab) {
-        this.tab = tab;
+    private int id;
+    private double avg_exercise;
+    private double avg_food;
+    private double avg_sleep;
+    private double diff_exercise;
+    private double diff_food;
+    private double diff_sleep;
+
+    public Dashboard(int id, double avg_exercise, double avg_food, double avg_sleep, double diff_exercise, double diff_food, double diff_sleep) {
+        this.id = id;
+        this.avg_exercise = avg_exercise;
+        this.avg_exercise = avg_exercise;
+        this.avg_sleep = avg_sleep;
+        this.diff_exercise = diff_exercise;
+        this.diff_food = diff_food;
+        this.diff_sleep = diff_sleep;
     }
 
-    public void open() throws Exception {
-        ListView listView = new ListView();
-        listView.setLayoutX(0);
-        listView.setLayoutY(0);
-        listView.setPrefSize(350,650);
+    public int getId() { return id; }
 
-        TextField txt_id = new TextField();
-        Label lbl_id = new Label("ID: ");
-        txt_id.setLayoutX(875);
-        txt_id.setLayoutY(120);
-        txt_id.setPrefSize(350,45);
-        lbl_id.setLayoutX(750);
-        lbl_id.setLayoutY(120);
-        txt_id.setEditable(false);
+    public String toString() { return id + ""; }
 
-        TextField txt_firstName = new TextField();
-        Label lbl_firstName = new Label("First Name: ");
-        txt_firstName.setLayoutX(875);
-        txt_firstName.setLayoutY(180);
-        txt_firstName.setPrefSize(350,45);
-        lbl_firstName.setLayoutX(750);
-        lbl_firstName.setLayoutY(180);
-        txt_firstName.setEditable(false);
+    public double getAvg_exercise() {
+        return avg_exercise;
+    }
 
-        TextField txt_lastName = new TextField();
-        Label lbl_lastName = new Label("Last Name: ");
-        txt_lastName.setLayoutX(875);
-        txt_lastName.setLayoutY(240);
-        txt_lastName.setPrefSize(350,45);
-        lbl_lastName.setLayoutX(750);
-        lbl_lastName.setLayoutY(240);
-        txt_lastName.setEditable(false);
+    public void setAvg_exercise(double avg_exercise) {
+        this.avg_exercise = avg_exercise;
+    }
 
-        Group group = new Group();
-        group.getChildren().addAll(txt_firstName,lbl_firstName,txt_lastName,lbl_lastName,txt_id,lbl_id,listView);
-        tab.setContent(group);
+    public double getAvg_food() {
+        return avg_food;
+    }
+
+    public void setAvg_food(double avg_food) {
+        this.avg_food = avg_food;
+    }
+
+    public double getAvg_sleep() {
+        return avg_sleep;
+    }
+
+    public void setAvg_sleep(double avg_sleep) {
+        this.avg_sleep = avg_sleep;
+    }
+
+    public double getDiff_exercise() {
+        return diff_exercise;
+    }
+
+    public void setDiff_exercise(double diff_exercise) {
+        this.diff_exercise = diff_exercise;
+    }
+
+    public double getDiff_food() {
+        return diff_food;
+    }
+
+    public void setDiff_food(double diff_food) {
+        this.diff_food = diff_food;
+    }
+
+    public double getDiff_sleep() {
+        return diff_sleep;
+    }
+
+    public void setDiff_sleep(double diff_sleep) {
+        this.diff_sleep = diff_sleep;
     }
 }
+

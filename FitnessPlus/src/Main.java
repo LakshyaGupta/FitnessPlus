@@ -20,12 +20,10 @@ public class Main extends Application {
         tp.prefHeightProperty().bind(primaryStage.heightProperty());
         tp.prefWidthProperty().bind(primaryStage.widthProperty());
 
-        //String configPath = "/Users/lakshyagupta/IdeaProjects/FitnessPlus/src/config.properties";
-
-        new Dashboard(tab1).open();
-        new Exercise(tab2).open();
-        new Food(tab3).open();
-        new Sleep(tab4).open();
+        new DashboardTab(tab1).open();
+        new ExerciseTab(tab2).open();
+        new FoodTab(tab3).open();
+        new SleepTab(tab4).open();
 
 
         Group group = new Group();
